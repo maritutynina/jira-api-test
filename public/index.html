@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+    <meta charset="utf-8" />
+    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Регистрация</title>
+    <style>
+        .ie-screen {
+            display: none;
+        }
+
+            .ie-screen.show {
+                width: 100vw;
+                height: 100vh;
+                background-color: #038b89;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 22px;
+            }
+    </style>
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="ie-screen" id="ie-screen">
+        Этот браузер не поддерживается.
+    </div>
+    <div id="root"></div>
+    <script>
+        function showIEScreen() {
+            const ua = window.navigator.userAgent;
+            const isIE = /MSIE|Trident/.test(ua);
+            if (isIE) {
+                const ieScreen = document.getElementById("ie-screen");
+                ieScreen.classList.add("show");
+            }
+        }
+
+        showIEScreen();
+    </script>
+</body>
+</html>

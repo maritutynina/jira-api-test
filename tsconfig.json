@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "es6",
+        "target": "es5",
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./src",
+        "sourceMap": true,
+        "typeRoots": [ "./types", "./node_modules/@types", "src/custom.d.ts" ],
+        "paths": {
+            "src/*": [ "./*" ]
+        }
+    },
+    "include": [
+        "./src"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "types"
+    ]
+}
